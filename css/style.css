@@ -1,0 +1,142 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  background-image: url(/Images/bg-desktop.png);
+  background-repeat: no-repeat;
+  background-color: hsl(0, 100%, 74%);
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+nav {
+  display: flex;
+  justify-content: space-around;
+  background: hsl(0, 0%, 100%);
+  padding: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+main {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  height: 100vh;
+  padding: 5px;
+}
+.sec1 {
+  color: white;
+  margin-right: 70px;
+}
+
+.box1 {
+  background: hsl(248, 32%, 49%);
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  padding: 2px;
+}
+.span1 {
+  font-weight: bold;
+}
+.box2 {
+  padding: 20px;
+  text-align: center;
+  background: white;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+form input {
+  padding-left: 20px;
+}
+form input,
+button {
+  padding: 15px;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid whitesmoke;
+}
+form p {
+  font-size: 9px;
+  color: gray;
+}
+.span2 {
+  color: red;
+}
+button {
+  background: hsl(154, 59%, 51%);
+  color: white;
+  cursor: pointer;
+}
+.sec1 h1 {
+  line-height: 35px;
+  font-weight: 700;
+}
+.sec1 p {
+  font-weight: 400px;
+  line-height: 20px;
+  font-size: 0.8rem;
+}
+
+/******************************************
+/* Active state error display
+/*******************************************/
+/* input:invalid {
+  background: url(/Images/icon-error.svg) no-repeat 95% 50%;
+  background-size: 25px;
+  border-color: red;
+} */
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+@media screen and (max-width: 375px) {
+  main {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .sec1 {
+    color: white;
+    margin: 0 30px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  .sec1 h1,
+  .sec1 p {
+    text-align: center;
+    font-weight: 500;
+  }
+  section {
+    margin: 20px 30px;
+  }
+  nav {
+    display: none;
+  }
+  nav a {
+    padding: 5px;
+  }
+  form p {
+    font-size: 11px;
+    line-height: 25px;
+  }
+  body {
+    background-image: url(/Images/bg-mobile.png);
+    background-color: hsl(0, 100%, 74%);
+  }
+}
